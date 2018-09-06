@@ -8,7 +8,6 @@ var methodOverride = require('method-override');
 const app = express()
 var routes = require('./routes.js')
 app.use(express.static(__dirname + '/public'));                 // set the static files location /public/img will be /img for users
-app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({'extended':'true'}));            // parse application/x-www-form-urlencoded
