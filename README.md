@@ -8,5 +8,5 @@
 # install dependencies
 npm install
 
-# serve with  localhost:8080
+# serve with  localhost:3000
 node app.js
