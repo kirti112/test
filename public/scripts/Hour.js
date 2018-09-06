@@ -8,12 +8,6 @@ angular.module('vtest')
                 var encoded_url = encodeURI(url);
                  return $http.get(encoded_url);
             },
-            CheckUser:function(Instance_id) {
-             var url ='/users/check_users_exists/';
-             var encoded_url = encodeURI(url);
-             return $http.get(encoded_url);
-             },
-
             create : function(hourData) {	
                 var url = '/hours/save';
                 var encoded_url = encodeURI(url);

@@ -31,7 +31,7 @@ exports.Save =function(req,res,next)
                    return res.json({'id':null,'message':err.message});
                 }
 					
-					return 	res.json({'id':post.id,'message':'success'});
+					return 	res.json({'id':post.id,'message':'Added Successfully'});
                 });
 	
 

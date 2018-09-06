@@ -8,6 +8,30 @@ angular.module('vtest').controller('mainController', function ($scope,$modal,$q 
 	$scope.UserInfo={};
 	$scope.final={};
 	
+	
+	
+	/* TableData */
+	
+	var gethours = function () {
+			var deferred = $q.defer();
+			Hour.all($scope.Hours)
+                    .success(function (data) {
+						
+                       $scope.result=deferred.resolve(data);
+                    })
+                      .error(function(error) {
+						
+						deferred.reject(data);
+					  })
+				return deferred.promise;
+					};
+	
+				
+	
+	gethours().then(function(data){ $scope.result=data});
+	
+	/*  End TableData */
+	
 	/* Create Hour */
 	
 	$scope.save= function()
@@ -16,25 +40,19 @@ angular.module('vtest').controller('mainController', function ($scope,$modal,$q 
 		  
 		$scope.submitted = true;
 		if ($scope.HoursInfo.$valid) {
-			Hour.all($scope.Hours)
-                    .success(function (data) {
-						
-                       $scope.result=data
-                    })
-                      .error(function(error) {
-						
-						if(error.message=="invalidaccess")
-						{
-						
-						}
-         	
-		})
+			
+			
+			
+			
 		Hour.create($scope.Hours)
                     .success(function (data) {
                         $scope.submitted = false;
+						
                         $scope.Hours = {};
+						
                      
 							alert(data.message)	
+							gethours().then(function(data){ $scope.result=data});
 				
                     })
                       .error(function(error) {
@@ -88,27 +106,6 @@ angular.module('vtest').controller('mainController', function ($scope,$modal,$q 
 
 	/* end of format time */
 	
-	/* TableData */
-	
-	var gethours = function () {
-			var deferred = $q.defer();
-			Hour.all($scope.Hours)
-                    .success(function (data) {
-						
-                       $scope.result=deferred.resolve(data);
-                    })
-                      .error(function(error) {
-						
-						deferred.reject(data);
-					  })
-				return deferred.promise;
-					};
-	
-				
-	
-	gethours().then(function(data){ $scope.result=data});
-	
-	/*  End TableData */
 	
 	/* Edit and Complete  Popup*/
 	
