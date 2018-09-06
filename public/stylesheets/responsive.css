@@ -1,0 +1,503 @@
+@media screen and (min-width: 220px) and (max-width: 767px) {
+
+    section.top-header {
+        padding: 0 0 41px;
+    }
+    .custom_container {
+        padding: 0 15px;
+        width: 100%;
+    }
+.lss_logo img {
+  margin: 0 auto;
+  width: 100%;
+}
+    .dashboard_info span.lss_logo img {
+  margin: 0 auto;
+}
+    .content-box {
+        text-align:center;
+    }
+    .logo {
+        padding: 25px 15px;
+        text-align: center;
+        margin: 0;
+    }
+    .keyword_cont{
+    height:64px;
+    } 
+    .logo2 img {
+	float:none;
+}
+    .zipcode_cont
+    {
+        clear:both;
+        height:70px;
+    }
+    .tab_box .btn.btn-large.btn-info.tab_checked {
+  background: #f98b40 url("../images/check_icon.png") no-repeat scroll 18px center / 23px 25px;
+}
+    .tab_box .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  margin-left: -3px !important;
+}
+.headtitle > img
+{
+ margin: 0 auto;
+    width: 100%;
+}
+
+    .logo2 { padding:24px 0 9px 0; }
+    .logo2 .img-responsive { width:250px; margin:0 auto; }
+    
+    .loading_chart .block-ui-message {
+    
+		width: 55%!important;
+		padding-left: 21px;
+		padding-right: 21px;
+		padding-top: 0px;
+    
+    }
+
+    .lls_support .btn.btn-default {
+        width: 100%;
+    }
+    .hoursLbl{
+        display: none;
+    }
+    .keyword_cont{
+
+        width:100%;
+    }
+    .zipcode_cont{
+        width:100%;
+        margin-left:0;
+    }
+    .cont-lhs {
+        padding: 0 15px;
+    }
+
+    .cont-rhs {
+        padding: 0 15px;
+    }
+    .business_state {
+        padding: 0 0px 0 0px;
+        margin-bottom: 15px;
+    }
+    .input-group.custom-search-form {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .buss_hours{
+        margin-bottom:20px;
+    }
+    #Userbusiness_hours .form-group {
+        margin-bottom: 0 !important;
+    }
+    .content-box {
+        padding: 0;
+    }
+
+    .content-box h1 {
+        font-size: 25px;
+        line-height:normal;
+        margin-bottom: 8px;
+    }
+    .content-box p {
+        margin-bottom: 27px;
+    }
+
+    .content-box .custom-search-form .form-control {
+        width: 100%;
+    }
+    .content-box .btn.btn-default{
+        width: 100%;
+    }
+
+    .content-box .input-group-btn {
+        margin: 0 0 0;
+        text-align: center;
+        width: 100% ;
+        padding: 0px;
+    }
+
+    .dir_includ h1 {
+        font-size: 33px;
+        margin: 0 0 27px;
+    }
+    .dir-dt {
+        width: 100%;
+    }
+    .dir-dt ul {
+        padding: 0; margin:0px;
+    }
+
+    .dir-dt ul li {
+        border: 1px solid #d9d9d9;
+        float: left;
+        margin: 0 0 7px;
+        text-align: center;
+        width: 100%;
+    }
+    .content-box .btn.btn-default{
+        margin:0;
+    }
+    .dir-list {
+        float: left;
+        width: 100%;
+    }
+
+    section.dir_includ {
+        padding: 29px 0;
+    }
+
+    .feature-content {
+        border-bottom: 1px solid #ddd;
+        border-right: medium none;
+    }
+
+    .feature-content3 {
+        border-bottom: 1px solid #ddd; border-right: medium none;
+
+    }
+    section.features {
+        padding: 29px 0;
+    }
+    .features h1 {
+        margin: 0 0 20px;
+        font-size: 33px;
+    }
+    .footer-content p {
+        font-size: 18px;
+        text-align: justify;
+        float:left;
+        width:100%;
+    }
+
+    .footer h1 {
+        margin: 0 0 20px;
+        font-size: 33px;
+    }
+    .button-sky .controls {
+        text-align: center;
+    }
+    section.footer {
+        padding: 29px 0; margin: 30px 0 0; height:100%;
+    }
+    .footer-content p {
+        margin:0 0 27px 0px
+    }
+    .tab_box .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+        border-radius: 25px;
+        border-right: 1px solid #c3c3c3;
+    }
+    .tab_box .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+        border:none;
+        border-radius: 25px;
+    }
+    .tab_box .btn-group > .btn:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child) {
+        border-radius: 25px;
+        border:none;
+     }
+    .tab_box .btn-large.btn-info {
+        margin-bottom: 11px;
+        width: 100%;
+    }
+    .inner-box .checkbox {
+        padding-left: 9px;
+    }
+    .tab_box {
+        padding: 13px 0 0;
+    }
+
+    .list-content {
+        margin: 0 0 0 30px;
+        width: 76%;
+        overflow: hidden;
+    }
+    .list-content h2 {
+        font-size: 13px;
+    }
+    .list-content > p {
+        font-size: 11px;
+    }
+    .list-content a {
+        font-size: 12px;
+    }
+    .form_data .form-control {
+        width: 100%;
+    }
+
+    .select_Div2 {
+        padding: 0;position:relative;
+    }
+
+    .tab-content .select_F1 {
+        width: 100%;
+    }
+    .tab-content .select_F2 {
+        clear: both;
+        margin-right: 0;
+        padding: 0 15px;
+        width: 100%;
+    }
+    button.btn.btn-default.orange_btn, .orange_btn_reset {
+        margin: 0 0 13px;
+        outline: medium none;
+    }
+
+    .custom_container2 {
+        padding: 0 15px;
+        width: 100% !important;
+    }
+    .custom_container2 .logo2 img {
+        padding: 0 0 14px 0;
+        float:none;
+    }
+    .orange_btn2 {
+        width: 100%;
+    }
+
+    .lls_vertical_tab li {
+        border-radius: 4px;
+        padding: 7px 0;
+        margin: 0 0 9px;
+        text-align: center;
+        background-color:#000;
+        width:100%;
+        line-height:normal;
+        color:#fff;
+
+        cursor: pointer;
+    }
+
+    .lls_vertical_tab li:hover {
+        color:#fff;
+        font-weight: bold;
+    }
+    .lls_vertical_tab li.ng-scope.ng-binding.active {
+        color:#000;
+        font-weight:bold;
+        background-color:#fff;
+        border:1px solid #000;
+        }
+    -webkit-box.orange_btn_reset {
+        background-color: #f78636 !important;
+        border: medium none;
+        border-radius: 20px;
+        color: #fff;
+        font-family: "Lato",sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        height: 41px;
+        margin: 13px 0 0;
+        outline: medium none;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+        float: left;
+        -shadow: 2px 2px 0  #141414 ;
+        -moz-box-shadow: 2px 2px 0  #141414 ;
+        box-shadow: 2px 2px 0  #141414;
+
+    }
+    
+    .headtitle > img {
+        float: left;
+        margin: 6px 0 0;
+    }
+    .addres_user {
+        float: left;
+        font-size: 11px;
+        margin: 6px 0 0 14px;
+        width: 64%;
+    }
+    .firm_name {
+        font-size: 18px;
+    }
+    .chart_loading > img {
+        width: 100%;
+    }
+    .pading_btm .tb-margin {
+        padding-left: 34px;
+    }
+    .pading_btm {
+        margin:0px;
+    }
+    .tab-content {
+        margin:0px;
+    }
+    .text-center .btn-default.orange_btn {
+        margin: 0 0 40px;
+        width: 100%;
+
+    }
+
+    .business_state{
+        padding:0 !important;
+        margin:0 0 15px 0;
+    }
+   
+    .upload_box {
+        margin:0;
+        width: 100%;
+    }
+    .hour-btn {
+        margin: 0 0px 20px 0;
+    }
+    .nav.nav-tabs.set-nav.lls_vertical_tab {
+        margin: 0 auto;
+        width:100%;
+        padding: 18px 0;
+    }
+    .image_preview .img-responsive {
+        display: inline;
+    }
+    .btn-group.btn-width {
+        margin: 0 auto;
+        width:100%;
+    }
+    .col_lhs{ padding-left:0px !important}
+    .col-rhs{ padding-left:0px !important}
+
+    .logo2 {
+        float: none;
+        margin: auto !important;
+        width:100%;
+    }
+    .left-ul {
+        margin:0px; width:100%;
+    }
+    button.btn.btn-default.grey_btn {
+        display: block;
+        margin: 0 auto;
+    }
+    .tab_box h1{
+        text-align: center;
+    }
+    .cl-sec2 {
+        position: absolute;
+        right: 13px;
+        top: 9px;
+    }
+    .cont-rhs {
+        padding: 0 15px;
+    }
+    .cont-lhs {
+        padding: 0 15px;
+    }
+    .tab-content .form_data {
+        margin-top: 5px;
+
+    }
+    .tab-content .select_F2{
+        float:none; padding:0 15px;
+    }
+    .orange_btn_reset {
+        margin: 13px 0 0;
+        width: 100%;
+        float: left;
+    }
+    .orange_btn {
+        float: left;
+        width: 100%;
+        margin-left:0px;
+    }
+    .checkbox input[type="checkbox"], .checkbox input[type="radio"] {
+        float: left;
+        margin: 19px 0 0 -3px;
+        width: 20%;
+        z-index: 1;
+    }
+    .content-box{
+        text-align: center;
+        margin:0 auto;
+    }
+	.content-box br {
+  display: none;
+}
+.footer-content {
+    padding: 0px;
+}
+.footer-content2 {
+    padding: 0px;
+}
+.btn_custom.btn.btn-default {
+  margin: 0 0 28px;
+}
+.checkbox label::before {
+  margin-left: -20px;
+
+}
+	
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+.custom_container2 {
+  width: 100%;
+  padding:0 30px;
+}
+.custom_container {
+  padding: 0 30px!important;
+  width: 100%;
+}
+.container .tab_box .btn-large.btn-info {
+  font-size:12px;
+}
+.keyword_cont {
+  width: 64%;
+}
+.container .dir-dt ul li {
+        border: 1px solid #d9d9d9;
+        float: left;
+        margin: 0 0 7px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .dir-list {
+        float: left;
+        width: 100%;
+    }
+    .logo_placeholder {
+  padding: 60px 24px;
+
+}
+.dir-dt ul li {
+  border: 1px solid #d9d9d9;
+  float: left;
+  margin: 0 0 7px;
+  text-align: center;
+  width: 100%;
+}
+.tab_box .btn.btn-large.btn-info.tab_checked {
+  background: #f98b40 url("../images/check_icon.png") no-repeat scroll 4px center / 17px 17px !important;
+}
+.icons_status img {
+  width: 36px;
+}
+.icons_status label {
+  font-size: 12px;
+}
+.tab_box .btn-large.btn-info {
+  font-size: 10px;
+}
+.checkbox {
+  padding-left: 6px;
+}
+.checkbox input[type="checkbox"], .checkbox input[type="radio"] {
+  margin: 27px 0 0 3px;
+}
+}
+
+@media screen and (min-width: 800px) and (max-width: 1280px) {
+.custom_container2 {
+  width: 91%;
+}
+}
+
+@media screen and (min-width: 414px) and (max-width: 736px) {
+.tab_box .btn-large.btn-info {
+  font-size:12px;
+}
+}
+
+

@@ -1,0 +1,295 @@
+
+<!-------------------------------------------------------------Business_info start------------------------------------------------------------>
+<section ng-controller="mainController" class="business_info">
+    <div class="custom_container2">
+        <div class="col-xs-12 col-sm-12 col-md-12 logo2">
+                 </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 tab_box">
+
+            <div class="btn-group btn-width">
+                <button class="btn btn-large btn-info active tab_current">1. ADD hours</button>
+                <button class="btn btn-large btn-info active border-lhs-rhs tab_current" >2. Confirm Notes</button>
+                <button class="btn btn-large btn-info active  	 tab_current" >3. Complete Task </button>
+            </div>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="business">
+                    <h1>Just steps away!</h1>
+                    <p>Add Details Below</p>
+
+			  </div>
+              <div class="clearfix"></div>
+                <!----------------------------------------------------form----------------------------------------------------------->
+                <div class="main_form_cont">
+
+                    
+                <form  id="HoursInfo" name="HoursInfo" role="form"  class="form-horizontal form_data mar_up" novalidate>
+                    <h3 class="main_form_headings"><i class="fa fa-building" aria-hidden="true"></i>
+                       Add Estimation.</h3>
+                    <br>
+                    <div class=" col-sm-12  col-xs-12 col-md-12 info-first">
+                        
+                        <div class="form-group" show-errors >
+
+                            <input  ng-pattern="/^[a-zA-Z][0-9]{7}$/" ng-maxlength="20"    type="text" class="form-control col-L" id="tasknumber"    name="tasknumber"  ng-model="Hours.tasknumber" placeholder="Task Number" required >
+                            <span class="asterisk_input_bus">  </span>
+                            <span  ng-show="submitted || HoursInfo.tasknumber.$touched">
+                                <span class="label label-danger" ng-show="HoursInfo.tasknumber.$error.required">Please enter hours</span>
+                             <span class="label label-danger" ng-show="HoursInfo.tasknumber.$error.pattern">Please enter valid value.</span>
+                           
+                            </span>
+
+                            <span  ng-show="submitted || HoursInfo.tasknumber.$touched">
+                                <span class="label label-danger" ng-show=" HoursInfo.tasknumber.$error.minlength">Too short!</span>
+                             <span class="label label-danger" ng-show="HoursInfo.tasknumber.$error.maxlength">Too long!(Maximum 100 characters)</span>
+							
+                            
+                            </span>
+
+                        </div>
+                    </div>
+
+                    <div class=" col-sm-12 col-md-12 col-xs-12">
+                        <div class="form-group"  show-errors>
+                            <input  ng-maxlength="50"   type="text" class="form-control col-L"   id="est_hours"  name="est_hours" ng-model="Hours.est_hours" ng-change="format(Hours.est_hours,'estimate')" placeholder="Total Estimate" required>
+                            <span class="asterisk_input_bus">  </span>
+                            <span  ng-show="submitted || HoursInfo.est_hours.$touched">
+                                <span class="label label-danger" ng-show="HoursInfo.est_hours.$error.required">Please Enter Estimate Hours</span>
+                            </span>
+
+                             <span  ng-show="submitted || HoursInfo.est_hours.$touched">
+                                <span class="label label-danger" ng-show="HoursInfo.est_hours.$error.minlength">Too short!</span>
+                                 <span class="label label-danger" ng-show="HoursInfo.est_hours.$error.maxlength">Too long!(Maximum 50 characters)</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col_M_full">
+                        <div class="col-sm-6 col-md-6 col-xs-12 select_F1">
+                            <div class="form-group" show-errors>
+                                <input    type="text" class="form-control col-L" id="est_notes"    name="est_notes"   ng-model="Hours.est_notes" placeholder="Estmate Notes" required>
+                                <span class="asterisk_input_bus">  </span>
+                                <span  ng-show="submitted || HoursInfo.est_notes.$touched ">
+                                    <span class="label label-danger" ng-show="HoursInfo.est_notes.$error.required">Please enter estimate notes</span>
+                                       <span class="label label-danger" ng-show="HoursInfo.est_notes.$error.pattern">Please enter valid value.</span>
+                                </span>
+                                <span  ng-show="submitted || HoursInfo.est_notes.$touched ">
+                                <span class="label label-danger" ng-show="HoursInfo.est_notes.$error.minlength">Too short!</span>
+								
+                            </span>
+                            </div>
+
+                        </div>
+
+                        <div class=" col-md-6 col-sm-6 col-xs-12 select_F2 ">
+                            <div class="form-group" show-errors>
+                                <input   ng-maxlength="20" ng-minlength="1"  type="text" class="form-control col-R" id="act_hours"  name="act_hours"   ng-model="Hours.act_hours"  ng-change="format(Hours.act_hours,'actual')" placeholder="Actual hours" required>
+                                <span class="asterisk_input_bus">  </span>
+                                <span  ng-show="submitted">
+                                  <span class="label label-danger" ng-show="HoursInfo.act_hours.$error.required">Please enter Actual hours</span>
+                                </span>
+
+                                 <span  ng-show="submitted">
+                                    <span class="label label-danger" ng-show="HoursInfo.act_hours.$error.pattern || HoursInfo.act_hours.$error.minlength || HoursInfo.act_hours.$error.maxlength">Please enter correct hours</span>
+                                </span>
+ 
+                            </div>
+                        </div>
+                    </div>
+					     <div class=" col-sm-12 col-md-12 col-xs-12">
+                        <div class="form-group"  show-errors>
+                            <input  ng-maxlength="50"   type="text" class="form-control col-L"   id="notes"  name="notes" ng-model="Hours.notes"  placeholder="Notes" required>
+                            <span class="asterisk_input_bus">  </span>
+                            <span  ng-show="submitted || HoursInfo.notes.$touched">
+                                <span class="label label-danger" ng-show="HoursInfo.notes.$error.required">Please Enter Notes</span>
+                            </span>
+
+                             <span  ng-show="submitted || HoursInfo.notes.$touched">
+                                <span class="label label-danger" ng-show="HoursInfo.notes.$error.minlength">Too short!</span>
+                                 <span class="label label-danger" ng-show="HoursInfo.notes.$error.maxlength">Too long!(Maximum 50 characters)</span>
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <div class=" col-md-12 col-xs-12">
+                        <div class="form-group main_ctarow" >
+                           
+                            
+                            
+                            <input ng-disabled="disablelisted" data-toggle="tooltip" title="Click here to submit your business"   ng-click="save(Hours)"  class="btn btn-default orange_btn " type="submit" value="Save"/>
+                </form>
+
+                </div>
+            </div>
+      
+
+	  </div>
+   
+			
+
+
+			<div class="clearfix"></div>
+			
+			<!-- List of Added Hours -->
+				 <h3 class="main_form_headings"><i class="fa fa-building" aria-hidden="true"></i>
+                        Hours
+						</h3>
+                    <br/>
+				<div class="table-responsive">          
+				<table class="table">
+					<thead>
+				<tr>
+					<th>Task #</th>
+					<th>Estimate Hours </th>
+					<th>Estimate Notes </th>
+					<th>Actual Hours</th>
+					<th>Notes</th>
+					<th>Action</th>
+					</tr>
+				</thead>
+				<tbody >
+			<tr ng-repeat="rs in result">
+	  
+						<td>{{rs.tasknumber}}</td>
+						<td>{{rs.est_hours}}</td>
+						<td>{{rs.est_notes}}</td>
+						<td>{{rs.act_hours}}</td>
+						<td>{{rs.notes}}</td>
+						<td><input type="button" class="btn btn-primary" ng-click="edit(rs)" ng-show="!rs.completed" value="Edit"/><input type="button"  ng-show="!rs.completed" ng-click="open(rs)" class="btn btn-primary" value="complete"><span class="complete" ng-show="rs.completed">Completed</span></td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+		<!-- End List of Added Hours -->
+		
+		
+		<!--Start complete Popup -->
+		
+		
+		<script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3>Complete Task
+			</h3>
+        </div>
+        <form  name="Final">
+		<input type="hidden"  class="form-control"   id="_id"  name="_id" ng-model="final._id"  placeholder="Task Number" />
+           
+          <div class="modal-body">
+		
+           
+		   <div class="form-group"  show-errors>
+            <label>Total Hours</label>
+            <input type="text"  class="form-control"   id="notes"  name="total_hours" ng-model="final.total_hours"  placeholder="Notes" />
+            </div>
+			 <div class="form-group"  show-errors>
+            <label>Final Notes</label>
+            <textarea rows="4" cols="50" ng-model="final.final_notes" name="final_notes">
+			</textarea>
+			</div>
+          </div>
+          <div class="modal-footer">
+              <button  class="btn btn-warning" ng-click="cancel()">Cancel</button>
+              <input type="submit" ng-click="submit(final)"   class="btn primary-btn" value="Complete" />
+          </div>
+        </form>
+    </script>
+<!--end complete popup -->
+	
+	
+	<!-- strat of editpopup -->
+		<script type="text/ng-template" id="edit.html">
+		<P></P>
+        <div class="modal-header">
+            <h3>Edit Task</h3>
+        </div>
+          <form  id="UpdateInfo" name="UpdateInfo" role="form"   novalidate>
+		   <div class="modal-body">
+                    <h3 class="main_form_headings"><i class="fa fa-building" aria-hidden="true"></i>
+                        Edit Hours</h3>
+                    <br>
+
+                    <div class=" col-sm-12 col-md-12 col-xs-12">
+                        <div class="form-group"  show-errors>
+                            <input  ng-maxlength="50"   type="text" class="form-control col-L"   id="est_hours"  name="est_hours" ng-model="UpdateHour.est_hours" ng-change="chkdecimal(UpdateHour.est_hours,'estimate')" placeholder="Total Estimate" required>
+                            <span class="asterisk_input_bus">  </span>
+                            <span  ng-show="submitted || UpdateInfo.est_hours.$touched">
+                                <span class="label label-danger" ng-show="UpdateInfo.est_hours.$error.required">Please Enter Estimate Hours</span>
+                            </span>
+
+                             <span  ng-show="submitted || UpdateInfo.est_hours.$touched">
+                                <span class="label label-danger" ng-show="UpdateInfo.est_hours.$error.minlength">Too short!</span>
+                                 <span class="label label-danger" ng-show="UpdateInfo.est_hours.$error.maxlength">Too long!(Maximum 50 characters)</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col_M_full">
+                        <div class="col-sm-6 col-md-6 col-xs-12 select_F1">
+                            <div class="form-group" show-errors>
+                                <input    type="text" class="form-control col-L" id="est_notes"    name="est_notes"   ng-model="UpdateHour.est_notes" placeholder="Estmate Notes" required>
+                                <span class="asterisk_input_bus">  </span>
+                                <span  ng-show="submitted || UpdateInfo.est_notes.$touched ">
+                                    <span class="label label-danger" ng-show="UpdateInfo.est_notes.$error.required">Please enter estimate notes</span>
+                                       <span class="label label-danger" ng-show="UpdateInfo.est_notes.$error.pattern">Please enter valid value.</span>
+                                </span>
+                                <span  ng-show="submitted || UpdateInfo.est_notes.$touched ">
+                                <span class="label label-danger" ng-show="UpdateInfo.est_notes.$error.minlength">Too short!</span>
+								
+                            </span>
+                            </div>
+
+                        </div>
+
+                        <div class=" col-md-6 col-sm-6 col-xs-12 select_F2 ">
+                            <div class="form-group" show-errors>
+                                <input   ng-maxlength="20" ng-minlength="1"  type="text" class="form-control col-R" id="act_hours"  name="act_hours"   ng-model="UpdateHour.act_hours"  ng-change="chkdecimal(UpdateHour.act_hours,'actual')" placeholder="Actual hours" required>
+                                <span class="asterisk_input_bus">  </span>
+                                <span  ng-show="submitted">
+                                  <span class="label label-danger" ng-show="UpdateInfo.act_hours.$error.required">Please enter Actual hours</span>
+                                </span>
+
+                                 <span  ng-show="submitted">
+                                    <span class="label label-danger" ng-show="UpdateInfo.act_hours.$error.pattern || UpdateInfo.act_hours.$error.minlength || UpdateInfo.act_hours.$error.maxlength">Please enter correct hours</span>
+                                </span>
+ 
+                            </div>
+                        </div>
+                    </div>
+		 <div class=" col-sm-12 col-md-12 col-xs-12">
+                        <div class="form-group"  show-errors>
+                            <input  ng-maxlength="50"   type="text" class="form-control col-L"   id="notes"  name="notes" ng-model="UpdateHour.notes"  placeholder="Notes" required>
+                            <span class="asterisk_input_bus">  </span>
+                            <span  ng-show="submitted || UpdateInfo.notes.$touched">
+                                <span class="label label-danger" ng-show="HoursInfo.notes.$error.required">Please Enter Notes</span>
+                            </span>
+
+                             <span  ng-show="submitted || UpdateInfo.notes.$touched">
+                                <span class="label label-danger" ng-show="UpdateInfo.notes.$error.minlength">Too short!</span>
+                                 <span class="label label-danger" ng-show="UpdateInfo.notes.$error.maxlength">Too long!(Maximum 50 characters)</span>
+                            </span>
+                        </div>
+                    </div>
+					</div>
+			
+					<div class="modal-footer">
+              <button  class="btn btn-warning" ng-click="cancel()">Cancel</button>
+              <input type="submit" ng-click="submit(UpdateHour)"   class="btn primary-btn" value="Update" />
+          </div>
+				</div>
+                </form>
+
+             </script>
+			 
+		<!-- end of editpopup -->	 
+			 
+			 
+
+   </div>
+
+    </div><!--tab_box-->
+
+</div><!--custom_container-->
+</section><!--section business-->
+
+<!-------------------------------------------------------------business_info end------------------------------------------------------------> 
